@@ -2,7 +2,7 @@
 <html>
     <head>
     <meta charset="utf-8">
-    <title>Авторизация</title>
+    <title>Регистрация</title>
 
 <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -43,21 +43,35 @@
     <body>
         <div class="container">
 
-            <form class="form-signin">
-                <h2 class="form-signin-heading">Авторизация</h2>
+            <form class="form-signup">
+                <h2 class="form-signin-heading">Регистрация</h2>
                 <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">@</span>
-                    <input type="email" class="form-control" placeholder="E-mail" aria-describedby="basic-addon1">
+                    <label for="First">Фамилия</label>
+                    <input type="text" class="form-control" id="First">
                 </div>
-                <br>
                 <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">***</span>
-                    <input type="password" class="form-control" placeholder="Пароль" aria-describedby="basic-addon1">
+                    <label for="Second">Имя</label>
+                    <input type="text" class="form-control" id="Second">
+                </div>
+                <div class="input-group">
+                    <label for="Patron">Отчество</label>
+                    <input type="text" class="form-control" id="Patron">
+                </div>
+                <div class="input-group">
+                    <label for="Kaf">Кафедра</label>
+                    <input type="text" class="form-control" id="Kaf">
+                </div>
+                <div class="input-group">
+                    <label for="Email">E-mail</label>
+                    <input type="email" class="form-control" id="Email">
+                </div>
+                <div class="input-group">
+                    <label for="Password">Пароль</label>
+                    <input type="password" class="form-control" id="Password">
                 </div>
                 <br>
                 <p>
-                    <button class="btn btn-success" type="submit">Войти</button>
-                    <a class="btn btn-primary" href="sign_up.php" type="button">Регистрация</a>
+                    <button class="btn btn-primary" type="sumit">Зарегистрироваться</button>
                 </p>
             </form>
         </div> <!-- /container -->
