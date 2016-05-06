@@ -40,8 +40,8 @@
                         <li class="menu-item dropdown dropdown-submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Создать </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Преподаватель-Администратор</a></li>
-                                <li><a href="#">Преподаватель</a></li>
+                                <li><a href="sign_up.php">Преподаватель-Администратор</a></li>
+                                <li><a href="sign_up.php">Преподаватель</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Редактировать</a></li>

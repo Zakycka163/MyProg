@@ -28,40 +28,6 @@
         
     </head>
     <body>
-        <div class="container">
-
-            <form class="form-signin">
-                <center><h3 class="form-signin-heading">Создать пользователя</h3></center>
-                <div class="input-group">
-                    <label for="First">Фамилия</label>
-                    <input type="text" class="form-control" id="First">
-                </div>
-                <div class="input-group">
-                    <label for="Second">Имя</label>
-                    <input type="text" class="form-control" id="Second">
-                </div>
-                <div class="input-group">
-                    <label for="Patron">Отчество</label>
-                    <input type="text" class="form-control" id="Patron">
-                </div>
-                <div class="input-group">
-                    <label for="Kaf">Кафедра</label>
-                    <input type="text" class="form-control" id="Kaf">
-                </div>
-                <div class="input-group">
-                    <label for="Email">E-mail</label>
-                    <input type="email" class="form-control" id="Email">
-                </div>
-                <div class="input-group">
-                    <label for="Password">Пароль</label>
-                    <input type="password" class="form-control" id="Password">
-                </div>
-                <br>
-                <center>
-                    <button class="btn btn-primary" type="sumit">Создать</button>
-                    <a class="btn btn-danger" href="sign_in.php" type="button">Отмена</a>
-                </center>
-            </form>
-        </div> <!-- /container -->
+        <?php require_once "blocks/signUpAdm.php" ?>
     </body>
 </html>
