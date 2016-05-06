@@ -23,12 +23,10 @@
                         <li><a href="#">Удалить</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Редактирование Рабочей программы</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Редактирование Практикума</a></li>
                     </ul>
                 </li>
                 <li class="menu-item dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Администрирование <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Управление<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li class="menu-item dropdown dropdown-submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Отчеты </a>
@@ -49,9 +47,19 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="myClass"><input type="email" class="form-control" placeholder="E-mail"></li>
-                <li class="myClass"><input type="password" class="form-control" placeholder="Пароль"></li>
-                <li class="myClass"><button class="btn btn-success" type="submit">Вход</button></li>
+                <!--<li class="myClass">
+                    <div class="input-group input-group-sm">
+                        <input type="email" class="form-control" placeholder="E-mail">
+                    </div>
+                </li>
+                <li class="myClass">
+                    <div class="input-group input-group-sm">
+                        <input type="password" class="form-control" placeholder="Пароль" aria-describedby="sizing-addon3">
+                    </div>
+                </li>-->
+                <li class="myClass">
+                    <input class="btn btn-success btn-sm" onclick="location.href='/MyProg/sign_in.php'" type="button" value="Войти">
+                </li>
             </ul>
         </div><!-- /.navbar-collapse -->               
     </div><!-- /.container-fluid -->
