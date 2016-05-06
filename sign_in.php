@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>Авторизация</title>
-        <!--<link rel="SHORTCUT ICON" href="img/pvgus.ico" type="image/x-icon">-->
         <link rel="SHORTCUT ICON" href="img/ico.jpg" type="image">
         
 <!-- Latest compiled and minified CSS -->
@@ -14,6 +13,8 @@
 
 <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        
+        <link href="css/sign.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             body {
                 padding-top: 210px;
@@ -24,23 +25,6 @@
                 -o-background-size: 100%; /* Opera 9.6+ */
                 background-size: cover;     
             }
-            .form-signin {
-                max-width: 300px;
-                padding: 19px 29px 29px;
-                margin: 0 auto 20px;
-                background-color: #fff;
-                border: 1px solid #e5e5e5;
-                -webkit-border-radius: 5px;
-                    -moz-border-radius: 5px;
-                        border-radius: 5px;
-                -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                        box-shadow: 0 1px 2px rgba(0,0,0,.05);
-            }
-            .form-signin .form-signin-heading,
-            .form-signin .checkbox {
-                margin-bottom: 10px;
-            }
         </style>
         
     </head>
@@ -48,7 +32,7 @@
         <div class="container" >
 
             <form class="form-signin">
-                <h2 class="form-signin-heading">Авторизация</h2>
+                <center><h3 class="form-signin-heading">Авторизация</h3></center>
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">@</span>
                     <input type="email" class="form-control" placeholder="E-mail" aria-describedby="basic-addon1">
@@ -61,7 +45,7 @@
                 <br>
                 <center>
                     <button class="btn btn-success" type="submit">Вход</button>
-                    <a class="btn btn-primary" href="sign_up.php" type="button">Регистрация</a>
+                    <!--<a class="btn btn-primary" href="sign_up.php" type="button">Регистрация</a>-->
                     <a class="btn btn-danger" href="index.php" type="button">Назад</a>
                 </center>
             </form>

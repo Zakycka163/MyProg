@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Регистрация</title>
+        <title>Создание пользователя</title>
+        <link rel="SHORTCUT ICON" href="img/ico.jpg" type="image">
 
 <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -13,6 +14,7 @@
 <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     
+        <link href="css/sign.css" rel="stylesheet" type="text/css">
         <style type="text/css">
             body {
                 padding-top: 210px;
@@ -22,24 +24,6 @@
                 -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
                 -o-background-size: 100%; /* Opera 9.6+ */
                 background-size: cover;     
-            }
-            .form-signin {
-                max-width: 300px;
-                padding: 19px 29px 29px;
-                margin: 0 auto 20px;
-                background-color: #fff;
-                border: 1px solid #e5e5e5;
-                -webkit-border-radius: 5px;
-                    -moz-border-radius: 5px;
-                        border-radius: 5px;
-                -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                        box-shadow: 0 1px 2px rgba(0,0,0,.05);
-            }
-            .form-signin .form-signin-heading,
-            .form-signin .checkbox {
-                margin-bottom: 10px;
-            }
         </style>
         
     </head>
@@ -47,7 +31,7 @@
         <div class="container">
 
             <form class="form-signin">
-                <h2 class="form-signin-heading">Регистрация</h2>
+                <center><h3 class="form-signin-heading">Создать пользователя</h3></center>
                 <div class="input-group">
                     <label for="First">Фамилия</label>
                     <input type="text" class="form-control" id="First">
@@ -74,7 +58,7 @@
                 </div>
                 <br>
                 <center>
-                    <button class="btn btn-primary" type="sumit">Зарегистрироваться</button>
+                    <button class="btn btn-primary" type="sumit">Создать</button>
                     <a class="btn btn-danger" href="sign_in.php" type="button">Отмена</a>
                 </center>
             </form>
