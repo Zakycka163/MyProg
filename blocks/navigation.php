@@ -50,6 +50,7 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="/MyProg/about.php">О приложении</a></li>
                 <li class="myClass">
                     <input class="btn btn-success btn-sm" onclick="location.href='/MyProg/sign_in.php'" type="button" value="Войти">
                 </li>
