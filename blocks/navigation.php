@@ -50,16 +50,6 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <!--<li class="myClass">
-                    <div class="input-group input-group-sm">
-                        <input type="email" class="form-control" placeholder="E-mail">
-                    </div>
-                </li>
-                <li class="myClass">
-                    <div class="input-group input-group-sm">
-                        <input type="password" class="form-control" placeholder="Пароль" aria-describedby="sizing-addon3">
-                    </div>
-                </li>-->
                 <li class="myClass">
                     <input class="btn btn-success btn-sm" onclick="location.href='/MyProg/sign_in.php'" type="button" value="Войти">
                 </li>
