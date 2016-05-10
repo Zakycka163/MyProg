@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Главная</a>
+            <a class="navbar-brand" href="/MyProg/index.php">Главная</a>
         </div>
 
 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,17 +46,14 @@
                             </ul></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header"><b><big>Пользователь</big></b></li>
-                        <li><a href="/MyProg/sign_up.php">Создать</a></li>
-                        <li><a href="/MyProg/users.php">Изменить или удалить</a></li>
+                        <li><a href="/MyProg/security/sign_up.php">Создать</a></li>
+                        <li><a href="/MyProg/security/users.php">Изменить или удалить</a></li>
                     </ul>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/MyProg/about.php">О приложении</a></li>
-                <li class="myClass">
-                    <input class="btn btn-success btn-sm" onclick="location.href='/MyProg/sign_in.php'" type="button" value="Войти">
-                </li>
-            </ul>
+            
+            <?php require_once "buttons/exit.php" ?>
+            
         </div><!-- /.navbar-collapse -->               
     </div><!-- /.container-fluid -->
 </nav>

@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Главная</a>
+            <a class="navbar-brand" href="/MyProg/index.php">Главная</a>
         </div>
 
 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,7 +16,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/MyProg/about.php">О приложении</a></li>
                 <li class="myClass">
-                    <input class="btn btn-success btn-sm" onclick="location.href='/MyProg/sign_in.php'" type="button" value="Войти">
+                    <input class="btn btn-success btn-sm" onclick="location.href='/MyProg/security/sign_in.php'" type="button" value="Войти">
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->               
