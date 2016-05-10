@@ -14,7 +14,6 @@
 <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#">Задачи</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Задачи <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -47,15 +46,8 @@
                             </ul></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header"><b><big>Пользователь</big></b></li>
-                        <li class="menu-item dropdown dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Создать </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="sign_up.php">Преподаватель-Администратор</a></li>
-                                <li><a href="sign_up.php">Преподаватель</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Редактировать</a></li>
-                        <li><a href="#">Удалить</a></li>
+                        <li><a href="/MyProg/sign_up.php">Создать</a></li>
+                        <li><a href="/MyProg/users.php">Изменить или удалить</a></li>
                     </ul>
                 </li>
             </ul>

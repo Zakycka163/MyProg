@@ -21,7 +21,7 @@
         
     </head>
     <body>
-        <?php require_once "blocks/navigation.php" ?>
+        <?php require_once "blocks/navAdm.php" ?>
         <?php require_once "blocks/footer.php" ?>
     </body>
 </html>

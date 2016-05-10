@@ -22,7 +22,7 @@
     </head>
     <body>
         <?php require_once "base.php" ?>
-        <?php require_once "blocks/navigation.php" ?>
+        <?php require_once "blocks/navAdm.php" ?>
         <center><h3>Пользователи</h3></center>
         <?php require_once "blocks/footer.php" ?>
     </body>
