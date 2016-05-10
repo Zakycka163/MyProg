@@ -25,29 +25,6 @@
                         <li><a href="#">Редактирование Рабочей программы</a></li>
                     </ul>
                 </li>
-                <li class="menu-item dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Управление<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li class="menu-item dropdown dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Отчеты </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Отчет 1</a></li>
-                                <li><a href="#">Отчет 2</a></li>
-                                <li><a href="#">Отчет 3</a></li>
-                            </ul></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-header"><b><big>Пользователь</big></b></li>
-                        <li class="menu-item dropdown dropdown-submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Создать </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="sign_up.php">Преподаватель-Администратор</a></li>
-                                <li><a href="sign_up.php">Преподаватель</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Редактировать</a></li>
-                        <li><a href="#">Удалить</a></li>
-                    </ul>
-                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/MyProg/about.php">О приложении</a></li>
