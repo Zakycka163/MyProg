@@ -13,7 +13,7 @@
         
     </head>
     <body>
-        <?php require_once "blocks/navWork.php" ?>
+        <?php require_once "blocks/navAdm.php" ?>
         <?php require_once "blocks/footer.php" ?>
     </body>
 </html>
