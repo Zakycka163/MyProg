@@ -18,11 +18,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Работа с УМК <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Создать</a></li>
-                        <li><a href="#">Редактировать</a></li>
-                        <li><a href="#">Удалить</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Редактирование Рабочей программы</a></li>
+                        <li><a href="#">Создать УМК</a></li>
+                        <li><a href="#">Изменить или удалить УМК</a></li>
                     </ul>
                 </li>
             </ul>

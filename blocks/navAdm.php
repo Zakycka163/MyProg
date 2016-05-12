@@ -27,11 +27,10 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Работа с УМК <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Создать</a></li>
-                        <li><a href="#">Редактировать</a></li>
-                        <li><a href="#">Удалить</a></li>
+                        <li><a href="#">Создать возврат</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Редактирование Рабочей программы</a></li>
+                        <li><a href="#">Создать УМК</a></li>
+                        <li><a href="#">Изменить или удалить УМК</a></li>
                     </ul>
                 </li>
                 <li class="menu-item dropdown">
@@ -40,9 +39,10 @@
                         <li class="menu-item dropdown dropdown-submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Отчеты </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Отчет 1</a></li>
-                                <li><a href="#">Отчет 2</a></li>
-                                <li><a href="#">Отчет 3</a></li>
+                                <li><a href="#">Выполненные</a></li>
+                                <li><a href="#">Возвраты на доработку</a></li>
+                                <li><a href="#">По видам</a></li>
+                                <li><a href="#">История по выбранным</a></li>
                             </ul></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header"><b><big>Пользователь</big></b></li>
