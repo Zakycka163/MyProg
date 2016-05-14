@@ -19,6 +19,8 @@
         
         <center><h3>Пользователи</h3></center>
         
+        <?php  ?>
+        
         <?php require_once "../blocks/footer.php" ?>
     </body>
 </html>

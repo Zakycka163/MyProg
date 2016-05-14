@@ -18,38 +18,41 @@
     </head>
     <body>
         <div class="container">
-            <form class="form-signin" method="post">
+            <form class="form-signin" method="post" charset="utf-8">
                 <center><h3 class="form-signin-heading">Создать пользователя</h3></center>
                 <div class="input-group">
                     <label for="First">Фамилия</label>
-                    <input type="text" minlength=2 required class="form-control" name="first">
+                    <input type="text" lang="ru" minlength=2 maxlength="50" required class="form-control" name="first">
                 </div>
                 <div class="input-group">
                     <label for="Second">Имя</label>
-                    <input type="text" minlength=2 required class="form-control" name="second">
+                    <input type="text" lang="ru" minlength=2 maxlength="50" required class="form-control" name="second">
                 </div>
                 <div class="input-group">
                     <label for="Kaf">Кафедра</label>
-                    <input type="text" minlength=2 required class="form-control" name="kaf">
+                    <input type="text" lang="ru" minlength=2 maxlength="100" required class="form-control" name="kaf">
                 </div>
                 <div class="input-group">
                     <label for="Email">E-mail</label>
-                    <input type="email" required class="form-control" name="email">
+                    <input type="email" lang="en" maxlength="100" required class="form-control" name="email">
                 </div>
                 <div class="input-group">
                     <label for="Password">Пароль</label>
-                    <input type="password" minlength=6 required class="form-control" name="password">
+                    <input type="password" minlength=6 maxlength="45" required class="form-control" name="password">
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" name="admin"> Права администратора
+                        <input type="checkbox" name="admin" value=1> Права администратора
                     </label>
-                </div>
+                </div>            
                 <center>
                     <input class="btn btn-primary" name="submit" type="submit" value="Создать">
-                    <a class="btn btn-danger" href="../index.php" type="button">Отмена</a>
+                    <a class="btn btn-danger" href="../index.php" type="button">Вернуться</a>
                 </center>
             </form>
+            
+            <?php require_once "register.php" ?>
+            
         </div> <!-- /container -->
     </body>
 </html>
