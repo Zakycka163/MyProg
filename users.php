@@ -3,7 +3,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Мои задачи</title>
+        <title>Пользователи</title>
+        <link rel="SHORTCUT ICON" href="img/ico.jpg" type="image">
 
         <?php require_once "blocks/links.php" ?>
         
@@ -14,7 +15,13 @@
         
     </head>
     <body>
+        <?php require_once "blocks/base.php" ?>
         <?php require_once "blocks/navAdm.php" ?>
+        
+        <center><h3>Пользователи</h3></center>
+        
+        <?php  ?>
+        
         <?php require_once "blocks/footer.php" ?>
     </body>
 </html>

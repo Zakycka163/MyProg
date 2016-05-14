@@ -46,8 +46,8 @@
                     </label>
                 </div>            
                 <center>
-                    <input class="btn btn-primary" name="submit" type="submit" value="Создать">
-                    <a class="btn btn-danger" href="../index.php" type="button">Вернуться</a>
+                    <input class="btn btn-success" name="submit" type="submit" value="Создать">
+                    <a class="btn btn-primary" href="../index.php" type="button">Вернуться</a>
                 </center>
             </form>
             

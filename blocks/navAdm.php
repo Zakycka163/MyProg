@@ -48,7 +48,7 @@
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header"><b><big>Пользователь</big></b></li>
                         <li><a href="/MyProg/security/sign_up.php">Создать</a></li>
-                        <li><a href="/MyProg/security/users.php">Изменить или удалить</a></li>
+                        <li><a href="/MyProg/users.php">Изменить или удалить</a></li>
                     </ul>
                 </li>
             </ul>

@@ -1,13 +1,14 @@
 <?php
-    $mysqli = false;
-    function connectDB(){
-        global $mysqli;
-        $mysqli = new mysqli("localhost", "root", "", "mydb");
-        $mysqli->query("SET NAMES 'utf-8'");
-    }
+    $link=false;
 
-    function closeDB(){
-        global $mysqli;
-        $mysqli->close();
+    function connect(){
+        global $link;
+        $link=mysqli_connect("localhost", "root", "", "mydb");
+        mysqli_query($link, "SET NAMES utf8");
+    }
+    
+    function close(){
+        global $link;
+        $link->close(); 
     }
 ?>
