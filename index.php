@@ -15,7 +15,7 @@
     </head>
     <body>
         <?php 
-            require_once "security/valid.php";
+            require_once "security/valid2.php";
             require_once "blocks/footer.php";
         ?>
     </body>
