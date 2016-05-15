@@ -3,15 +3,17 @@
     require_once "blocks/base.php" ;
     connect();
     $id=$_SESSION["id"];
-    $first = mysqli_query($link, "SELECT first_name, second_name FROM users WHERE user_id='".$id."'");
-    $q=implode(mysqli_fetch_assoc($query));
+    $first = mysqli_query($link, "SELECT first_name FROM users WHERE user_id='".$id."'");
+    $second = mysqli_query($link, "SELECT second_name FROM users WHERE user_id='".$id."'");
+    $first=implode(mysqli_fetch_assoc($first));
+    $second=implode(mysqli_fetch_assoc($second));
     close();
 ?>
 
 <ul class="nav navbar-nav navbar-right">
     <li class="myClass2">
         
-        <?php echo $q; ?>
+        <?php echo $first; echo $second; ?>
         
     </li>
     <li class="myClass">
