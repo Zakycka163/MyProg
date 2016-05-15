@@ -13,7 +13,7 @@
 <ul class="nav navbar-nav navbar-right">
     <li class="myClass2">
         
-        <?php echo $first; echo $second; ?>
+        <?php print("".$first." ".$second.""); ?>
         
     </li>
     <li class="myClass">
