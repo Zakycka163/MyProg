@@ -14,8 +14,10 @@
         
     </head>
     <body>
-        <?php require_once "blocks/navAdm.php" ?>
+        <?php 
+            require_once "security/valid.php";
+            require_once "blocks/footer.php";
+        ?>
         <center><h3>О приложении</h3></center>
-        <?php require_once "blocks/footer.php" ?>
     </body>
 </html>
