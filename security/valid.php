@@ -3,7 +3,6 @@
             
     if($_SESSION["id"]==null){
         header("Location: ../index.php");
-        require_once "blocks/navGuest.php";
     } else {
         connect();
         $id=$_SESSION["id"];
