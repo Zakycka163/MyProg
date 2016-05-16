@@ -1,10 +1,25 @@
 <center><h3>Разработка УМКД</h3></center>
 <div class="panel panel-default">
     <div class="panel-heading">
-        <center>Рабочая учебная программа дисциплины</center>
+        <center>Титульный лист</center>
     </div>
     <div class="panel-body">
         Panel content
+    </div>
+</div>
+
+<div class="form-group">
+    <center><label for="anot">Аннотация</label></center>
+    <input type="file" accept="application/msword" required class="form-control" id="anot">
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <center>Рабочая учебная программа дисциплины</center>
+    </div>
+    <div class="panel-body">
+        <center><h5>1. Цели освоения дисциплины</h5></center>
+        <input type="text" minlength=20 class="form-control" required>
     </div>
 </div>
 
