@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <title>Разработка УМК</title>
 
-        <?php require_once "blocks/links.php" ?>
+        <?php require_once "blocks/links.php"; ?>
         
         <link href="js/bootstrap-fix.js">
         <link href="css/bootstrap-fix.css" rel="stylesheet" type="text/css">
@@ -15,7 +15,7 @@
     </head>
     <body>
         <?php 
-            require_once "security/valid2.php";
+            require_once "security/validHome.php";
             require_once "blocks/footer.php";
         ?>
     </body>

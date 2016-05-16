@@ -30,7 +30,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="#">Создать возврат</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Создать УМК</a></li>
+                        <li><a href="work.php">Создать УМК</a></li>
                         <li><a href="#">Изменить или удалить УМК</a></li>
                     </ul>
                 </li>

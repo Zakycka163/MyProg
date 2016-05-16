@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,7 +20,7 @@
         <?php 
             require_once "security/valid.php";
             require_once "blocks/footer.php";
-        ?>        
+        ?>      
         <center><h3>Пользователи</h3></center>
     </body>
 </html>

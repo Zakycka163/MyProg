@@ -1,9 +1,7 @@
 <?php 
     require_once "blocks/base.php";
             
-    if($_SESSION["id"]==null){
-        require_once "blocks/navGuest.php";
-    } else {
+    if(!empty($_SESSION["id"])){
         connect();
         $id=$_SESSION["id"];
         $admin = mysqli_query($link, "SELECT admin FROM users WHERE user_id='".$id."'");
@@ -15,6 +13,8 @@
         }
         if($admin=="0"){
             require_once "blocks/navWork.php";
-        } 
+        }
+    } else {
+         require_once "blocks/navGuest.php";
     }
 ?>

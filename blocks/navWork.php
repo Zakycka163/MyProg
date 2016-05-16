@@ -19,7 +19,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Работа с УМК <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Создать УМК</a></li>
+                        <li><a href="work.php">Создать УМК</a></li>
                         <li><a href="#">Изменить или удалить УМК</a></li>
                     </ul>
                 </li>

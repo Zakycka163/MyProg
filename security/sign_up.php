@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,6 +18,7 @@
         
     </head>
     <body>
+        <?php require_once "validSignUp.php"; ?>
         <div class="container">
             <form class="form-signin" method="post" charset="utf-8">
                 <center><h3 class="form-signin-heading">Создать пользователя</h3></center>
