@@ -16,6 +16,7 @@
     <body>
         <?php 
             require_once "security/valid.php";
+            require_once "blocks/phpWordUse.php";
             require_once "blocks/ymkd.php";
             require_once "blocks/footer.php";
         ?>       
