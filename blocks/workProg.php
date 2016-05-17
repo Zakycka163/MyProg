@@ -18,6 +18,6 @@
     </div>
     <div class="panel-body">
         <center><h5>1. Цели освоения дисциплины</h5></center>
-        <input type="textbox" minlength=30 class="form-control" required>
+        <textarea name="wp1" class="form-control" required></textarea>
     </div>
 </div>
