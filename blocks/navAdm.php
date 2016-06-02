@@ -25,12 +25,12 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Работа с УМК <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Работа с УМР <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Создать возврат</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="work.php">Создать УМК</a></li>
-                        <li><a href="#">Изменить или удалить УМК</a></li>
+                        <li><a href="work.php">Создать УМР</a></li>
+                        <li><a href="#">Изменить или удалить УМР</a></li>
                     </ul>
                 </li>
                 <li class="menu-item dropdown">
