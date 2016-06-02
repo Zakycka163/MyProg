@@ -30,7 +30,7 @@
                         <li><a href="#">Создать возврат</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="work.php">Создать УМР</a></li>
-                        <li><a href="#">Изменить или удалить УМР</a></li>
+                        <li><a href="#">Список УМР</a></li>
                     </ul>
                 </li>
                 <li class="menu-item dropdown">
