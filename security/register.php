@@ -9,7 +9,7 @@
         connect();
         $query = mysqli_query($link, "SELECT user_id FROM users WHERE email='".mysqli_real_escape_string($link, $email)."'");
         if(mysqli_num_rows($query) > 0){
-            $err = "Пользователь с таким Email уже существует в базе данных";
+            $err = "Пользователь с таким Email уже существует";
         }
 
         if($err==""){
