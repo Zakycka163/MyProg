@@ -20,8 +20,7 @@
                         <li><a href="/MyProg/myMission.php">Смотреть</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Определить</a></li>
-                        <li><a href="#">Изменить</a></li>
-                        <li><a href="#">Проверить</a></li>
+                        <li><a href="#">Список задач</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
