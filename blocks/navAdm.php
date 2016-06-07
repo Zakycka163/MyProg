@@ -44,7 +44,7 @@
                                 <li><a href="#">История по выбранным</a></li>
                             </ul></li>
                         <li role="separator" class="divider"></li>
-                        <li class="dropdown-header"><b><big>Пользователь</big></b></li>
+                        <li class="dropdown-header"><b><big>Пользователи</big></b></li>
                         <li><a href="/MyProg/security/sign_up.php">Создать</a></li>
                         <li><a href="/MyProg/users.php">Список</a></li>
                     </ul>
