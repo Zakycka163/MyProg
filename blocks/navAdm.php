@@ -28,7 +28,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="#">Создать возврат</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="work.php">Создать УМР</a></li>
+                        <li><a href="ymr.php">Создать УМР</a></li>
                         <li><a href="#">Список УМР</a></li>
                     </ul>
                 </li>
