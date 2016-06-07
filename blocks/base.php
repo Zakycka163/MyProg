@@ -3,7 +3,7 @@
 
     function connect(){
         global $link;
-        $link=mysqli_connect("localhost", "root", "", "mydb");
+        $link=mysqli_connect("localhost", "root", "", "create_educational");
         mysqli_query($link, "SET NAMES utf8");
     }
     

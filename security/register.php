@@ -21,10 +21,10 @@
             if($_POST['admin']=null){
                 $admin=0;
             } else {
-                $admin = $_POST['admin'];
+                $admin=1;
             }
             
-            mysqli_query($link,"INSERT INTO users SET first_name='".$first."', second_name='".$second."', kafedra='".$kaf."', email='".$email."', password='".$password."', admin='".$admin."'");
+            mysqli_query($link,"INSERT INTO users SET first_name='".$first."', second_name='".$second."', kafedra='".$kaf."', email='".$email."', password='".$password."', type_id='".$admin."'");
             print "<div class='alert alert-success alert-dismissible' role='alert'>
                         <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
                         <strong>Успешно!</strong> Пользователь ".$email." создан

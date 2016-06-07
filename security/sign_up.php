@@ -23,11 +23,11 @@
             <form class="form-signin" method="post" charset="utf-8">
                 <center><h3 class="form-signin-heading">Создать пользователя</h3></center>
                 <div class="input-group">
-                    <label for="First">Фамилия</label>
+                    <label for="First">Имя</label>
                     <input type="text" lang="ru" minlength=2 maxlength="50" required class="form-control" name="first">
                 </div>
                 <div class="input-group">
-                    <label for="Second">Имя</label>
+                    <label for="Second">Фамилия</label>
                     <input type="text" lang="ru" minlength=2 maxlength="50" required class="form-control" name="second">
                 </div>
                 <div class="input-group">

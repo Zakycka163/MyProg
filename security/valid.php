@@ -4,7 +4,7 @@
     if(!empty($_SESSION["id"])){
         connect();
         $id=$_SESSION["id"];
-        $admin = mysqli_query($link, "SELECT admin FROM users WHERE user_id='".$id."'");
+        $admin = mysqli_query($link, "SELECT type_id FROM users WHERE user_id='".$id."'");
         $admin=implode(mysqli_fetch_assoc($admin));
         close();
 
