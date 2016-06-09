@@ -1,5 +1,5 @@
 <?php 
-    require_once "blocks/base.php" ;
+    require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/base.php") ;
     connect();
     $id=$_SESSION["id"];
     $first = mysqli_query($link, "SELECT first_name FROM users WHERE user_id='".$id."'");

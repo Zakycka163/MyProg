@@ -6,8 +6,8 @@
         <title>Разработка</title>
 
         <?php 
-            require_once "blocks/links.php"; 
-            require_once "security/valid.php";
+            require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/links.php"); 
+            require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/security/valid.php");
         ?>
         
     </head>
@@ -50,7 +50,7 @@
                     <br><br><br>
                     <button type="submit" class="btn btn-primary" name="submit" type="submit">Создать</button>
                 </form> 
-                <?php require_once "blocks/ymr/condition.php";?>
+                <?php require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/ymr/condition.php");?>
             </div>
         </div>
         

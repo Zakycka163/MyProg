@@ -17,10 +17,10 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Задачи <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/MyProg/myMission.php">Смотреть</a></li>
+                        <li><a href="/MyProg/pages/myMission.php">Смотреть</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Определить</a></li>
-                        <li><a href="#">Список задач</a></li>
+                        <li><a href="/MyProg/pages/listMission.php">Список задач</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -28,7 +28,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="#">Создать возврат</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="ymr.php">Создать УМР</a></li>
+                        <li><a href="/MyProg/pages/ymr.php">Создать УМР</a></li>
                         <li><a href="#">Список УМР</a></li>
                     </ul>
                 </li>
@@ -41,12 +41,11 @@
                                 <li><a href="#">Выполненные</a></li>
                                 <li><a href="#">Возвраты на доработку</a></li>
                                 <li><a href="#">По видам</a></li>
-                                <li><a href="#">История по выбранным</a></li>
                             </ul></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header"><b><big>Пользователи</big></b></li>
                         <li><a href="/MyProg/security/sign_up.php">Создать</a></li>
-                        <li><a href="/MyProg/users.php">Список</a></li>
+                        <li><a href="/MyProg/pages/users.php">Список</a></li>
                     </ul>
                 </li>
             </ul>

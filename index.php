@@ -6,6 +6,7 @@
         <title>Разработка УМК</title>
 
         <?php 
+            require_once "blocks/base.php";
             require_once "blocks/links.php"; 
             require_once "security/validHome.php";
         ?>

@@ -9,8 +9,8 @@
         <title>Мои задачи</title>
 
         <?php 
-            require_once "blocks/links.php"; 
-            require_once "security/valid.php";
+            require_once "../blocks/links.php"; 
+            require_once "../security/valid.php";
         ?>
         
     </head>

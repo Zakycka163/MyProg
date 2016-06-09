@@ -14,7 +14,7 @@
 <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/MyProg/about.php">О приложении</a></li>
+                <li><a href="/MyProg/pages/about.php">О приложении</a></li>
                 <li class="myClass">
                     <input class="btn btn-success btn-sm" onclick="location.href='/MyProg/security/sign_in.php'" type="button" value="Войти">
                 </li>

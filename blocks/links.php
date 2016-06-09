@@ -11,7 +11,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-<script src="js/bootstrap-fix.js"></script>
-<link href="css/bootstrap-fix.css" rel="stylesheet" type="text/css">
-<link href="css/forSignOnIndex.css" rel="stylesheet" type="text/css">
-<link href="css/background2.css" rel="stylesheet" type="text/css">
+<script src="/MyProg/js/bootstrap-fix.js"></script>
+<link href="/MyProg/css/bootstrap-fix.css" rel="stylesheet" type="text/css">
+<link href="/MyProg/css/forSignOnIndex.css" rel="stylesheet" type="text/css">
+<link href="/MyProg/css/background2.css" rel="stylesheet" type="text/css">

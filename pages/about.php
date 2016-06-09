@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <title>О Приложении</title>
 
-        <?php require_once "blocks/links.php" ?>
+        <?php require_once "links.php" ?>
  
         
     </head>

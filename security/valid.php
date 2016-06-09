@@ -1,5 +1,5 @@
 <?php 
-    require_once "blocks/base.php";
+    require_once "../blocks/base.php";
             
     if(!empty($_SESSION["id"])){
         connect();
@@ -9,12 +9,12 @@
         close();
 
         if($admin=="1"){
-            require_once "blocks/navAdm.php";
+            require_once "../blocks/navAdm.php";
         }
         if($admin=="0"){
-            require_once "blocks/navWork.php";
+            require_once "../blocks/navWork.php";
         }
     } else {
-        header("Location: index.php");
+        header("Location: ../index.php");
     }
 ?>
