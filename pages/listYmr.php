@@ -6,7 +6,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Создать задачу</title>
+        <title>Список разработок</title>
 
         <?php 
             require_once "../blocks/links.php"; 
@@ -15,6 +15,6 @@
         
     </head>
     <body>
-        <center><h3>Определение задач</h3></center>
+        <center><h3>Разработки</h3></center>
     </body>
 </html>

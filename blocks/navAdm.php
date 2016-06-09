@@ -19,17 +19,17 @@
                     <ul class="dropdown-menu">
                         <li><a href="/MyProg/pages/myMission.php">Смотреть</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Определить</a></li>
+                        <li><a href="/MyProg/pages/createMission.php">Определить</a></li>
                         <li><a href="/MyProg/pages/listMission.php">Список задач</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Работа с УМР <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Создать возврат</a></li>
+                        <li><a href="/MyProg/pages/createReturns.php">Создать возврат</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="/MyProg/pages/ymr.php">Создать УМР</a></li>
-                        <li><a href="#">Список УМР</a></li>
+                        <li><a href="/MyProg/pages/listYmr.php">Список УМР</a></li>
                     </ul>
                 </li>
                 <li class="menu-item dropdown">
@@ -38,7 +38,7 @@
                         <li class="menu-item dropdown dropdown-submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Отчеты </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Выполненные</a></li>
+                                <li><a href="/MyProg/pages/reports/report1.php">Выполненные</a></li>
                                 <li><a href="#">Возвраты на доработку</a></li>
                                 <li><a href="#">По видам</a></li>
                             </ul></li>

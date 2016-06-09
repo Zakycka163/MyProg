@@ -6,15 +6,15 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Мои задачи</title>
+        <title>Список задач</title>
 
         <?php 
-            require_once "blocks/links.php"; 
-            require_once "security/valid.php";
+            require_once "../blocks/links.php"; 
+            require_once "../security/valid.php";
         ?>
         
     </head>
     <body>
-        <center><h3>Все задачи</h3></center>
+        <center><h3>Задачи</h3></center>
     </body>
 </html>

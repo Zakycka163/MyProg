@@ -19,7 +19,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Работа с УМР <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/MyProg/pages/ymr.php">Создать УМР</a></li>
-                        <li><a href="#">Список УМР</a></li>
+                        <li><a href="/MyProg/pages/listYmr.php">Список УМР</a></li>
                     </ul>
                 </li>
                 
