@@ -48,7 +48,7 @@
                         <textarea type="text" cols="40" class="form-control" id="InputComment" name="Comment"></textarea>
                     </div>
                     <br><br><br>
-                    <button type="submit" class="btn btn-primary" name="submit" type="submit">Выбрать</button>
+                    <button type="submit" class="btn btn-primary" name="submit" type="submit">Создать</button>
                 </form> 
                 <?php require_once "blocks/ymr/condition.php";?>
             </div>
