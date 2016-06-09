@@ -14,9 +14,6 @@
         
     </head>
     <body>
-        <?php 
-            require_once "blocks/footer.php";
-        ?>
         <center><h3>О приложении</h3></center>
     </body>
 </html>

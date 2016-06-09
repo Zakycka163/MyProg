@@ -22,3 +22,4 @@
         </div><!-- /.navbar-collapse -->               
     </div><!-- /.container-fluid -->
 </nav>
+<?php require_once "footer.php";?>

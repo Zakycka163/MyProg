@@ -16,7 +16,6 @@
     <body>
         <?php 
             require_once "security/validHome.php";
-            require_once "blocks/footer.php";
         ?>
     </body>
 </html>

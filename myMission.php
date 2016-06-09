@@ -19,7 +19,6 @@
     <body>
         <?php 
             require_once "security/valid.php";
-            require_once "blocks/footer.php";
         ?>
         <center><h3>Мои задачи</h3></center>
     </body>

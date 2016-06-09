@@ -51,7 +51,10 @@
                 </li>
             </ul>
             
-            <?php require_once "buttons/exit.php" ?>
+            <?php 
+                require_once "buttons/exit.php";
+                require_once "footer.php";
+            ?>
             
         </div><!-- /.navbar-collapse -->               
     </div><!-- /.container-fluid -->
