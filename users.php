@@ -8,18 +8,13 @@
         <title>Пользователи</title>
         <link rel="SHORTCUT ICON" href="img/ico.jpg" type="image">
 
-        <?php require_once "blocks/links.php" ?>
-        
-        <link href="js/bootstrap-fix.js">
-        <link href="css/bootstrap-fix.css" rel="stylesheet" type="text/css">
-        <link href="css/forSignOnIndex.css" rel="stylesheet" type="text/css">
-        <link href="css/background2.css" rel="stylesheet" type="text/css">
+        <?php 
+            require_once "blocks/links.php"; 
+            require_once "security/valid.php";
+        ?>
         
     </head>
-    <body>
-        <?php 
-            require_once "security/valid.php";
-        ?>      
+    <body>     
         <center><h3>Пользователи</h3></center>
     </body>
 </html>

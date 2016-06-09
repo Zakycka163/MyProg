@@ -5,17 +5,13 @@
         <meta charset="utf-8">
         <title>Разработка УМК</title>
 
-        <?php require_once "blocks/links.php"; ?>
-        
-        <link href="js/bootstrap-fix.js">
-        <link href="css/bootstrap-fix.css" rel="stylesheet" type="text/css">
-        <link href="css/forSignOnIndex.css" rel="stylesheet" type="text/css">
-        <link href="css/background2.css" rel="stylesheet" type="text/css">
+        <?php 
+            require_once "blocks/links.php"; 
+            require_once "security/validHome.php";
+        ?>
         
     </head>
     <body>
-        <?php 
-            require_once "security/validHome.php";
-        ?>
+        <center><h3>Главная</h3></center>
     </body>
 </html>
