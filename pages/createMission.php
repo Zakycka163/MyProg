@@ -1,20 +1,57 @@
-<?php 
-    session_start();
-
-?>
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Создать задачу</title>
+        <title>Определение задачи</title>
 
-        <?php 
-            require_once "../blocks/links.php"; 
-            require_once "../security/valid.php";
-        ?>
+        <?php require_once "../blocks/links.php" ?>
+        
+        <link href="../css/sign.css" rel="stylesheet" type="text/css">
+        <link href="../css/background.css" rel="stylesheet" type="text/css">
+        
+        <style type="text/css">
+            body {
+                padding-top: 100px;
+                padding-bottom: 49px;    
+        </style>
         
     </head>
     <body>
-        <center><h3>Определение задач</h3></center>
+        <div class="container">
+            <form class="form-signin" method="post" charset="utf-8">
+                <center><h3 class="form-signin-heading">Определить задачу</h3></center>
+                <div class="input-group">
+                    <label for="user">Преподаватель</label>
+                    <select required name="user">
+                        <option selected disabled style="display:none;">Выбрать пользователя</option>
+                    <?php 
+                        require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/base.php");
+                        connect();
+                        $id=$_SESSION["id"];
+                        $result = mysqli_query($link, "SELECT first_name, second_name, email FROM users WHERE user_id!='".$id."'");
+                        while($row = mysqli_fetch_array($result)){
+                            echo "<option value='".$row['email']."' title='".$row['email']."'>".$row['first_name']." ".$row['second_name']."</option>";
+                        }
+                        close();                    
+                    ?>
+                    </select>
+                    
+                </div><br>
+                <div class="input-group">
+                    <label for="task">Задача</label>
+                    <textarea placeholder="Описание задачи" wrap="soft" rows="4" minlength=2 maxlength="100" required class="form-control" name="task"></textarea>
+                </div><br>
+                <div class="input-group">
+                    <label for="due_date">Дата завершения</label>
+                    <input type="date" required class="form-control" name="due_date">
+                </div><br>         
+                <center>
+                    <input class="btn btn-success" name="submit" type="submit" value="Определить">
+                    <a class="btn btn-primary" href="../index.php" type="button">Вернуться</a>
+                </center>
+            </form>
+                        
+        </div> <!-- /container -->
     </body>
 </html>
