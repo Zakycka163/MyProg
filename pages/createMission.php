@@ -23,7 +23,7 @@
                 <center><h3 class="form-signin-heading">Определить задачу</h3></center>
                 <div class="input-group">
                     <label for="user">Преподаватель</label>
-                    <select required name="user">
+                    <select required name="user_id">
                         <option selected disabled style="display:none;">Выбрать пользователя</option>
                     <?php 
                         require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/base.php");
@@ -51,6 +51,8 @@
                     <a class="btn btn-primary" href="../index.php" type="button">Вернуться</a>
                 </center>
             </form>
+            
+            <?php require_once "../blocks/createMiss.php" ?>
                         
         </div> <!-- /container -->
     </body>
