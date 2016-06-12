@@ -28,8 +28,7 @@
                     <?php 
                         require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/base.php");
                         connect();
-                        $id=$_SESSION["id"];
-                        $result = mysqli_query($link, "SELECT user_id, first_name, second_name, email FROM users WHERE user_id!='".$id."'");
+                        $result = mysqli_query($link, "SELECT user_id, first_name, second_name, email FROM users");
                         while($row = mysqli_fetch_array($result)){
                             echo "<option value='".$row['user_id']."' title='".$row['email']."'>".$row['first_name']." ".$row['second_name']."</option>";
                         }
