@@ -20,7 +20,7 @@
             <?php
                 connect();
                 $id = $_SESSION["id"];
-                $result = mysqli_query($link, "SELECT u.task, u.due_date, s.status FROM tasks u, statuses s WHERE u.user_id='".$id."' AND u.status_id=s.status_id AND u.status_id != 7");
+                $result = mysqli_query($link, "SELECT t.task, t.due_date, s.status FROM tasks t, statuses s WHERE t.user_id='".$id."' AND t.status_id=s.status_id AND t.status_id != 7");
                 if($result){
                     echo "<table class='table table-bordered'><tr class='active'><td>№</td><td>Задача</td><td>Дата завершения</td><td>Статус задачи</td></tr>";
                     $i = 1; 
