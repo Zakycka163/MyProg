@@ -23,14 +23,22 @@
             $type = $_POST['type'];
             $task = $_POST['task'];
             $date = date('Y-m-d');
+            $name = $_POST['name'];
+            $status = 1;
             
-            mysqli_query($link,"INSERT INTO works SET type_id='".$type."', task_id='".$task."', kafedra='".$kaf."', email='".$email."', password='".$password."', type_id='".$admin."'");
-        
-            if($_POST['type']==1){
-            
+            if(isset($group_id) and isset($_POST['commentWork'])){
+                $comment = $_POST['commentWork'];
+                mysqli_query($link,"INSERT INTO works SET type_id='".$type."', task_id='".$task."', group_id='".$group_id."', name='".$name."', comment='".$comment."', created_date='".$date."', modified_date='".$date."', status_id='".$status."'");
+            } elseif (isset($group_id)){
+                mysqli_query($link,"INSERT INTO works SET type_id='".$type."', task_id='".$task."', group_id='".$group_id."', name='".$name."', created_date='".$date."', modified_date='".$date."', status_id='".$status."'");
+            } elseif (isset($_POST['commentWork'])){
+                $comment = $_POST['commentWork'];
+                mysqli_query($link,"INSERT INTO works SET type_id='".$type."', task_id='".$task."', name='".$name."', comment='".$comment."', created_date='".$date."', modified_date='".$date."', status_id='".$status."'");
+            } else {
+                mysqli_query($link,"INSERT INTO works SET type_id='".$type."', task_id='".$task."', name='".$name."', created_date='".$date."', modified_date='".$date."', status_id='".$status."'");
             }
-            if($_POST['type']==2){
             
+            $_SESSION["ymr_id"] = mysqli_query($link,"SELECT LAST_INSERT_ID()");
             } 
         } else {
             print "<div class='alert alert-danger alert-dismissible' role='alert'>
