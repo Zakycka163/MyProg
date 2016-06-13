@@ -22,14 +22,14 @@
                                 <div class='row'>
                                     <div class='col-xs-6'>
                                         <div class='form-group'>
-                                            <center><label for='InputType'>Tип разработки</label></center>
+                                            <center><label for='InputType'>Tип разработки*</label></center>
                                             <select class='form-control' id='InputType' required name='type'>
                                                 <option selected disabled style='display:none;'>Выбрать тип</option>
                                                 <option type='1'>Рабочая учебная программа</option>
                                                 <option type='2'>Учебно-методический комплекс дисциплин</option></select></div><br><br>
 
                                         <div class='form-group'>
-                                            <center><label for='InputTask'>Задача</label></center>
+                                            <center><label for='InputTask'>Задача*</label></center>
                                             <select class='form-control' id='InputTask' required name='task'>
                                                 <option selected disabled style='display:none;'>Выбрать задачу</option>";
                                                 require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/base.php");
@@ -47,8 +47,8 @@
                                             $param .= "</select><br><br><br>
                                             
                                         <div class='form-group'>
-                                            <center><label for='InputName'>Название разработки</label></center>
-                                            <input type='text' required minlength=5 maxlength=100 class='form-control' id='InputName' name='Name'></div></div></div>
+                                            <center><label for='name'>Название разработки*</label></center>
+                                            <input type='text' required minlength=5 maxlength=100 class='form-control' id='name' name='name'></div></div></div>
                                         
                                 <div class='col-xs-6'>
                                     <div class='form-group'>
@@ -59,13 +59,13 @@
                                         <center><label>Группа разработок</label></center>
                                         <div class='row'>
                                             <div class='col-xs-6'>
-                                                <label for='InputTask'>Выбор готовых</label><br>
-                                                <select class='form-control' id='InputTask' required name='task'>
+                                                <label for='group'>Выбор готовых</label><br>
+                                                <select class='form-control' id='group' required name='group'>
                                                 <option selected disabled style='display:none;'>Выбрать задачу</option>";
                                                 connect();
                                                 $result = mysqli_query($link, "SELECT * FROM groups");
                                                 while($row = mysqli_fetch_array($result)){
-                                                    $param .= "<option task='";
+                                                    $param .= "<option group='";
                                                     $param .= $row[0];
                                                     $param .= " title='";
                                                     $param .= $row[3];
@@ -77,11 +77,11 @@
                                                 $param .= "</select></div>
                                                 
                                             <div class='col-xs-6'>
-                                                <label for='NameGr'>Название группы</label>
-                                                <input type='text' minlength=3 maxlength=40 class='form-control' id='NameGr' name='NameGr'><br>
+                                                <label for='nameGr'>Название группы</label>
+                                                <input type='text' minlength=3 maxlength=40 class='form-control' id='nameGr' name='nameGr'><br>
                                     
-                                                <label for='CommentGr'>Описание группы</label>
-                                                <textarea maxlength=100 class='form-control' id='CommentGr' name='CommentGr'></textarea></div></div></div></div></div>
+                                                <label for='commentGr'>Описание группы</label>
+                                                <textarea maxlength=100 class='form-control' id='commentGr' name='CommentGr'></textarea></div></div></div></div></div>
                                     
                                 <center><button type='submit' class='btn btn-primary' name='submit' type='submit'>Создать</button></center>
                             </form></div></div>";

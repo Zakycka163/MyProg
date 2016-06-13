@@ -1,6 +1,6 @@
 <div class='panel panel-default'>
     <div class='panel-heading'>
-        Начальные параметры
+        Структура РУП
     </div>
 <div class='panel-body'>
     <div class="form-group">
