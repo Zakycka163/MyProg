@@ -32,7 +32,7 @@
                                                     connect();
                                                     $result = mysqli_query($link, "SELECT type_id, type FROM types");
                                                     while($row = mysqli_fetch_array($result)){
-                                                        $param .= "<option type='";
+                                                        $param .= "<option value='";
                                                         $param .= $row[0];
                                                         $param .= "'>";
                                                         $param .= $row[1];
@@ -50,7 +50,7 @@
                                                     $user_id = $_SESSION["id"];
                                                     $result = mysqli_query($link, "SELECT task_id, task FROM tasks WHERE user_id='".$user_id."'");
                                                     while($row = mysqli_fetch_array($result)){
-                                                        $param .= "<option task='";
+                                                        $param .= "<option value='";
                                                         $param .= $row[0];
                                                         $param .= "'>";
                                                         $param .= mb_substr($row[1], '0', '40');
@@ -78,7 +78,7 @@
                                                     connect();
                                                     $result = mysqli_query($link, "SELECT * FROM groups");
                                                     while($row = mysqli_fetch_array($result)){
-                                                        $param .= "<option group='";
+                                                        $param .= "<option value='";
                                                         $param .= $row[0];
                                                         $param .= "' title='";
                                                         $param .= $row['comment'];

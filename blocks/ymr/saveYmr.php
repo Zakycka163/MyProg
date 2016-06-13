@@ -39,8 +39,8 @@
                 mysqli_query($link,"INSERT INTO works SET type_id='".$type."', task_id='".$task."', name='".$name."', created_date='".$date."', modified_date='".$date."', status_id='".$status."'");
             }
             
-            #$query = mysqli_query($link,"SELECT LAST_INSERT_ID()");
-            #$_SESSION["ymr_id"] = implode(mysqli_fetch_assoc($query));
+            $query = mysqli_query($link,"SELECT LAST_INSERT_ID()");
+            $_SESSION["ymr_id"] = implode(mysqli_fetch_assoc($query));
             } else {
                 print "<div class='alert alert-danger alert-dismissible' role='alert'>
                             <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
