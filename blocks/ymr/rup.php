@@ -1,41 +1,35 @@
-<?php 
-    session_start();
-?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Создание РУП</title>
+<div class='panel panel-default'>
+    <div class='panel-heading'>
+        Начальные параметры
+    </div>
+<div class='panel-body'>
+    <div class="form-group">
+        <label for="InputType">Группа</label><br>
+        <select id="InputType" name="task">
+            <option selected disabled>Выбрать группу</option>
+            <option task="1">Задача 1</option>
+            <option task="2">Задача 2</option>
+        </select><br>
+    </div>
 
-        <?php require_once "../links.php" ?>
-        
-    </head>
-    <body>
-        <div class="container" >
+    <div class="form-group">
+        <label for="InputName">Название разработки</label>
+        <textarea type="text" required class="form-control" id="InputName" name="Name"></textarea>
+    </div>
 
-            <form class="form-signin" method="post">
-                <center><h3 class="form-signin-heading">Авторизация</h3></center>
-                <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">@</span>
-                    <input lang="en" type="email" name="email" maxlength="100" required class="form-control" placeholder="E-mail" aria-describedby="basic-addon1">
-                </div>
-                <br>
-                <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">***</span>
-                    <input type="password" name="password" maxlength="45" required class="form-control" placeholder="Пароль" aria-describedby="basic-addon1">
-                </div>
-                <br>
-                <center>
-                    <button class="btn btn-success" name="submit" type="submit">Вход</button>
-                    <a class="btn btn-danger" href="../index.php" type="button">Отмена</a>
-                </center>
-            </form>
-            
-            <?php require_once "login.php" ?>
-            
-        </div> <!-- /container -->
-    </body>
-</html>
-<?php
-    require_once "blocks/base.php"; #понадобиться позже
-?>
+    <div class="form-group">
+        <label for="InputComment">Описание</label>
+        <textarea type="text" cols="40" class="form-control" id="InputComment" name="Comment"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="InputName">Название разработки</label>
+        <textarea type="text" required class="form-control" id="InputName" name="Name"></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="InputName">Название разработки</label>
+        <textarea type="text" required class="form-control" id="InputName" name="Name"></textarea>
+    </div>
+    
+</div>

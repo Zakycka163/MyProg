@@ -14,54 +14,39 @@
     <body>
         <center><h3>Разработка УМР</h3></center>
         
-        <div class="panel panel-default">
-            <div class="panel-heading">
+        <?php #require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/ymr/condition.php"); ?>
+        
+        <?php
+        $param = "<div class='panel panel-default'>
+            <div class='panel-heading'>
                 Начальные параметры
             </div>
-            <div class="panel-body">
-                <form class="input-group" method="post" charset="utf-8">
-                    <div class="form-group">
-                        <label for="InputType">Tип разработки</label><br>
-                        <select id="InputType" name="value">
+            <div class='panel-body'>
+                <form class='input-group' method='post' charset='utf-8'>
+                    
+                    <div class='form-group'>
+                        <label for='InputType'>Tип разработки</label><br>
+                        <select id='InputType' name='value'>
                             <option selected disabled>Выбрать тип</option>
-                            <option value="1">Рабочая учебная программа</option>
-                            <option value="2">Учебно-методический комплекс дисциплин</option>
+                            <option value='1'>Рабочая учебная программа</option>
+                            <option value='2'>Учебно-методический комплекс дисциплин</option>
                         </select><br>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="InputType">Задача</label><br>
-                        <select id="InputType" name="task">
+                    <div class='form-group'>
+                        <label for='InputType'>Задача</label><br>
+                        <select id='InputType' name='task'>
                             <option selected disabled>Выбрать задачу</option>
-                            <option task="1">Задача 1</option>
-                            <option task="2">Задача 2</option>
+                            <option task='1'>Задача 1</option>
+                            <option task='2'>Задача 2</option>
                         </select><br>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="InputType">Группа</label><br>
-                        <select id="InputType" name="task">
-                            <option selected disabled>Выбрать группу</option>
-                            <option task="1">Задача 1</option>
-                            <option task="2">Задача 2</option>
-                        </select><br>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="InputName">Название разработки</label>
-                        <textarea type="text" required class="form-control" id="InputName" name="Name"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="InputComment">Описание</label>
-                        <textarea type="text" cols="40" class="form-control" id="InputComment" name="Comment"></textarea>
-                    </div>
+
                     <br><br><br>
-                    <button type="submit" class="btn btn-primary" name="submit" type="submit">Создать</button>
+                    <button type='submit' class='btn btn-primary' name='submit' type='submit'>Создать</button>
                 </form> 
-                <?php require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/ymr/condition.php");?>
             </div>
-        </div>
-        
+        </div>"
+        ?>
     </body>
 </html>
