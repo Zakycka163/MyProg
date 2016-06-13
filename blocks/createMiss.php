@@ -6,6 +6,7 @@
             
             $task = htmlspecialchars(trim($_POST['task']));
             $due_date = $_POST['due_date'];
+            
             $status = 5;
             if(isset($_POST['user_id'])){
                 $user_id = $_POST['user_id'];

@@ -23,7 +23,7 @@
                 <center><h3 class="form-signin-heading">Определить задачу</h3></center>
                 <div class="input-group">
                     <label for="user">Преподаватель</label>
-                    <select required name="user_id">
+                    <select class='form-control' required name="user_id">
                         <option selected disabled style="display:none;">Выбрать пользователя</option>
                         <?php 
                             require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/base.php");
