@@ -15,9 +15,9 @@
         <center><h3>Разработка УМР</h3></center>
         
         <?php
-            if(isset($_SESSION["ymr_id"])){
-                print ($_SESSION["ymr_id"]);
-            } else {
+            /*if(isset($_SESSION["ymr_id"])){
+                echo ($_SESSION["ymr_id"]);
+            } else {*/
                 $param = "<div class='panel panel-default'>
                             <div class='panel-heading'>Начальные параметры</div>
                             <div class='panel-body'>
@@ -27,15 +27,25 @@
                                             <div class='form-group'>
                                                 <center><label for='InputType'>Tип разработки*</label></center>
                                                 <select class='form-control' id='InputType' required name='type'>
-                                                    <option selected disabled style='display:none;'>Выбрать тип</option>
-                                                    <option type='1'>Рабочая учебная программа</option>
-                                                    <option type='2'>Учебно-методический комплекс дисциплин</option></select></div><br><br>
+                                                    <option selected disabled style='display:none;'>Выбрать тип</option>";
+                                                    require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/base.php");
+                                                    connect();
+                                                    $result = mysqli_query($link, "SELECT type_id, type FROM types");
+                                                    while($row = mysqli_fetch_array($result)){
+                                                        $param .= "<option type='";
+                                                        $param .= $row[0];
+                                                        $param .= "'>";
+                                                        $param .= $row[1];
+                                                        $param .= "</option>";
+                                                    }
+                                                    close();
+                                                $param .="</select></div><br><br>
 
                                             <div class='form-group'>
                                                 <center><label for='InputTask'>Задача*</label></center>
                                                 <select class='form-control' id='InputTask' required name='task'>
                                                     <option selected disabled style='display:none;'>Выбрать задачу</option>";
-                                                    require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/base.php");
+                                                    
                                                     connect();
                                                     $user_id = $_SESSION["id"];
                                                     $result = mysqli_query($link, "SELECT task_id, task FROM tasks WHERE user_id='".$user_id."'");
@@ -70,8 +80,8 @@
                                                     while($row = mysqli_fetch_array($result)){
                                                         $param .= "<option group='";
                                                         $param .= $row[0];
-                                                        $param .= " title='";
-                                                        $param .= $row[3];
+                                                        $param .= "' title='";
+                                                        $param .= $row['comment'];
                                                         $param .= "'>";
                                                         $param .= $row[1];
                                                         $param .="</option>";
@@ -84,7 +94,7 @@
                                                     <input type='text' minlength=3 maxlength=40 class='form-control' id='nameGr' name='nameGr'><br>
 
                                                     <label for='commentGr'>Описание группы</label>
-                                                    <textarea maxlength=100 class='form-control' id='commentGr' name='CommentGr'></textarea></div></div></div></div></div>
+                                                    <textarea maxlength=100 class='form-control' id='commentGr' name='commentGr'></textarea></div></div></div></div></div>
 
                                     <center><button type='submit' class='btn btn-primary' name='submit' type='submit'>Создать</button></center>
                                 </form></div></div>";
@@ -92,7 +102,7 @@
                 print ($param);
 
                 require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/ymr/saveYmr.php");
-            }
+            #}
         ?>
     </body>
 </html>
