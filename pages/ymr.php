@@ -15,9 +15,9 @@
         <center><h3>Разработка УМР</h3></center>
         
         <?php
-            /*if(isset($_SESSION["ymr_id"])){
-                echo ($_SESSION["ymr_id"]);
-            } else {*/
+            if(isset($_SESSION["ymr_id"])){
+                require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/ymr/rup.php");
+            } else {
                 $param = "<div class='panel panel-default'>
                             <div class='panel-heading'>Начальные параметры</div>
                             <div class='panel-body'>
@@ -102,7 +102,7 @@
                 print ($param);
 
                 require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/ymr/saveYmr.php");
-            #}
+            }
         ?>
     </body>
 </html>
