@@ -1,25 +1,3 @@
-<div class='panel panel-success'>
-    <div class='panel-heading'>
-        <?php
-            require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/base.php");
-            connect();
-            $id = $_SESSION["ymr_id"];
-            $result = mysqli_query($link, "SELECT ty.type, w.name, ta.task, w.comment FROM types ty, works w, tasks ta WHERE w.work_id='".$id."' AND ty.type_id=w.type_id AND ta.task_id=w.task_id");
-            while($row = mysqli_fetch_array($result)){
-                echo "<b>Тип: </b>";
-                echo ($row[0]);
-                echo "<b>&nbsp;&nbsp;&nbsp;&nbsp;Имя: </b>";
-                echo ($row[1]);
-                echo "<b>&nbsp;&nbsp;&nbsp;&nbsp;Задача: </b>";
-                echo ($row[2]);
-                echo "<b>&nbsp;&nbsp;&nbsp;&nbsp;Описание: </b>";
-                echo ($row[3]);
-            }
-            close();
-        ?>
-    </div>
-<div class='panel-body'>
-    
     <div class="form-group">
         <label for="1">1. Цели освоения дисциплины (модуля)</label>
         <textarea type="text" class="form-control" id="1" name="part1"></textarea>
@@ -139,10 +117,3 @@
         <label for="12">12. Дополнения и изменения к рабочей учебной программе</label>
         <textarea type="text" class="form-control" id="12" name="part12"></textarea>
     </div>
-    
-    <center>
-        <input class="btn btn-success" name="submit" type="submit" value="Сохранить">&nbsp;&nbsp;&nbsp;&nbsp;
-        <input class="btn btn-primary" name="submit" type="submit" value="Создать">&nbsp;&nbsp;&nbsp;&nbsp;
-        <input class="btn btn-warning" name="submit" type="submit" value="Пока хватит">
-    </center>
-</div>

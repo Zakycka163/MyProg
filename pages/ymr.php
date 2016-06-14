@@ -8,6 +8,7 @@
         <?php 
             require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/links.php"); 
             require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/security/valid.php");
+            require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/base.php");
         ?>
         
     </head>
@@ -16,7 +17,29 @@
         
         <?php
             if(isset($_SESSION["ymr_id"]) and $_SESSION["ymr_id"]!=0){
+                echo "<div class='panel panel-success'>
+                        <div class='panel-heading'>";            
+                connect();
+                $id = $_SESSION["ymr_id"];
+                $result = mysqli_query($link, "SELECT ty.type, w.name, ta.task, w.comment FROM types ty, works w, tasks ta WHERE w.work_id='".$id."' AND ty.type_id=w.type_id AND ta.task_id=w.task_id");
+                while($row = mysqli_fetch_array($result)){
+                    echo "<b>Тип: </b>";
+                    echo ($row[0]);
+                    echo "<b>&nbsp;&nbsp;&nbsp;&nbsp;Имя: </b>";
+                    echo ($row[1]);
+                    echo "<b>&nbsp;&nbsp;&nbsp;&nbsp;Задача: </b>";
+                    echo ($row[2]);
+                    echo "<b>&nbsp;&nbsp;&nbsp;&nbsp;Описание: </b>";
+                    echo ($row[3]);
+                }
+                close();
+                echo "</div><div class='panel-body'>";
                 require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/ymr/ymk.php");
+                echo "<center>
+                        <input class='btn btn-success' name='submit' type='submit' value='Сохранить'>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class='btn btn-primary' name='submit2' type='submit' value='Создать'>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class='btn btn-warning' name='reject' type='submit' value='Пока хватит'>
+                    </center></div>";
             } else {
                 $param = "<div class='panel panel-default'>
                             <div class='panel-heading'>Начальные параметры</div>
