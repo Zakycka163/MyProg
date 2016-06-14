@@ -38,7 +38,7 @@
                 echo "<center>
                         <input class='btn btn-success' name='submit' type='submit' value='Сохранить'>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class='btn btn-primary' name='submit2' type='submit' value='Создать'>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input class='btn btn-warning' name='reject' type='submit' value='Пока хватит'>
+                        <input class='btn btn-warning' name='reject' type='submit' value='Остановить работу'>
                     </center></div>";
             } else {
                 $param = "<div class='panel panel-default'>
