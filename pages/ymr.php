@@ -16,7 +16,7 @@
         
         <?php
             if(isset($_SESSION["ymr_id"])){
-                require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/ymr/rup.php");
+                require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/ymr/ymk.php");
             } else {
                 $param = "<div class='panel panel-default'>
                             <div class='panel-heading'>Начальные параметры</div>
