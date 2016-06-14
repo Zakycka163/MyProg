@@ -15,7 +15,7 @@
         <center><h3>Разработка УМР</h3></center>
         
         <?php
-            if(isset($_SESSION["ymr_id"])){
+            if(isset($_SESSION["ymr_id"]) and $_SESSION["ymr_id"]!=0){
                 require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/ymr/ymk.php");
             } else {
                 $param = "<div class='panel panel-default'>

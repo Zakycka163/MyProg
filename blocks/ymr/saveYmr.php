@@ -41,6 +41,7 @@
             
             $query = mysqli_query($link,"SELECT LAST_INSERT_ID()");
             $_SESSION["ymr_id"] = implode(mysqli_fetch_assoc($query));
+            mysqli_query($link,"UPDATE tasks SET status_id=6 WHERE task_id='".$task."'");
             } else {
                 print "<div class='alert alert-danger alert-dismissible' role='alert'>
                             <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
