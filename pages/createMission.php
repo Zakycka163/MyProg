@@ -5,7 +5,10 @@
         <meta charset="utf-8">
         <title>Определение задачи</title>
 
-        <?php require_once "../blocks/links.php" ?>
+        <?php 
+            require_once "../blocks/links.php";
+            require_once "../security/validSignUp.php";
+        ?>
         
         <link href="../css/sign.css" rel="stylesheet" type="text/css">
         <link href="../css/background.css" rel="stylesheet" type="text/css">
