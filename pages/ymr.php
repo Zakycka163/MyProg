@@ -16,7 +16,7 @@
         <center><h3>Разработка УМР</h3></center>
         
         <?php
-            if(isset($_SESSION["ymr_id"]) and $_SESSION["ymr_id"]!=0){
+            if(isset($_SESSION["ymr_id"])){        
                 echo "<div class='panel panel-success'>
                         <div class='panel-heading'>";            
                 connect();
@@ -32,9 +32,14 @@
                     echo "<b>&nbsp;&nbsp;&nbsp;&nbsp;Описание: </b>";
                     echo ($row[3]);
                 }
-                close();
                 echo "</div><div class='panel-body'>";
-                require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/ymr/ymk.php");
+                $result2 = mysqli_query($link, "SELECT type_id FROM works WHERE work_id='".$id."'");
+                $type = implode(mysqli_fetch_assoc($result2));
+                if ($type==2){
+                    require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/ymr/ymk.php");
+                } else {
+                    require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/ymr/rup.php");
+                }
                 echo "<center>
                         <input class='btn btn-success' name='submit' type='submit' value='Сохранить'>&nbsp;&nbsp;&nbsp;&nbsp;
                         <input class='btn btn-primary' name='submit2' type='submit' value='Создать'>&nbsp;&nbsp;&nbsp;&nbsp;
