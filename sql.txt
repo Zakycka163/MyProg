@@ -1,0 +1,278 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema create_educational
+-- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `create_educational` ;
+
+-- -----------------------------------------------------
+-- Schema create_educational
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `create_educational` DEFAULT CHARACTER SET utf8 ;
+USE `create_educational` ;
+
+-- -----------------------------------------------------
+-- Table `create_educational`.`User_types`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `create_educational`.`User_types` ;
+
+CREATE TABLE IF NOT EXISTS `create_educational`.`User_types` (
+  `type_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `type` VARCHAR(15) NOT NULL,
+  PRIMARY KEY (`type_id`))
+ENGINE = InnoDB;
+
+CREATE UNIQUE INDEX `type_id_UNIQUE` ON `create_educational`.`User_types` (`type_id` ASC);
+
+CREATE UNIQUE INDEX `type_UNIQUE` ON `create_educational`.`User_types` (`type` ASC);
+
+
+-- -----------------------------------------------------
+-- Table `create_educational`.`Users`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `create_educational`.`Users` ;
+
+CREATE TABLE IF NOT EXISTS `create_educational`.`Users` (
+  `user_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `first_name` VARCHAR(30) NOT NULL,
+  `second_name` VARCHAR(30) NOT NULL,
+  `kafedra` VARCHAR(50) NOT NULL,
+  `email` VARCHAR(50) NOT NULL,
+  `password` VARCHAR(32) NOT NULL,
+  `type_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`user_id`),
+  CONSTRAINT `fk_Users_User types1`
+    FOREIGN KEY (`type_id`)
+    REFERENCES `create_educational`.`User_types` (`type_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE UNIQUE INDEX `user_id_UNIQUE` ON `create_educational`.`Users` (`user_id` ASC);
+
+CREATE INDEX `fk_Users_User types1_idx` ON `create_educational`.`Users` (`type_id` ASC);
+
+
+-- -----------------------------------------------------
+-- Table `create_educational`.`Types`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `create_educational`.`Types` ;
+
+CREATE TABLE IF NOT EXISTS `create_educational`.`Types` (
+  `type_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `type` VARCHAR(60) NOT NULL,
+  PRIMARY KEY (`type_id`))
+ENGINE = InnoDB;
+
+CREATE UNIQUE INDEX `type_id_UNIQUE` ON `create_educational`.`Types` (`type_id` ASC);
+
+
+-- -----------------------------------------------------
+-- Table `create_educational`.`Use_statuses`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `create_educational`.`Use_statuses` ;
+
+CREATE TABLE IF NOT EXISTS `create_educational`.`Use_statuses` (
+  `use_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `use` VARCHAR(5) NOT NULL,
+  PRIMARY KEY (`use_id`))
+ENGINE = InnoDB;
+
+CREATE UNIQUE INDEX `use_id_UNIQUE` ON `create_educational`.`Use_statuses` (`use_id` ASC);
+
+CREATE UNIQUE INDEX `use_UNIQUE` ON `create_educational`.`Use_statuses` (`use` ASC);
+
+
+-- -----------------------------------------------------
+-- Table `create_educational`.`Statuses`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `create_educational`.`Statuses` ;
+
+CREATE TABLE IF NOT EXISTS `create_educational`.`Statuses` (
+  `status_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `status` VARCHAR(20) NOT NULL,
+  `use_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`status_id`),
+  CONSTRAINT `fk_Statuses_Uses status1`
+    FOREIGN KEY (`use_id`)
+    REFERENCES `create_educational`.`Use_statuses` (`use_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_Statuses_Use_statuses1_idx` ON `create_educational`.`Statuses` (`use_id` ASC);
+
+CREATE UNIQUE INDEX `status_id_UNIQUE` ON `create_educational`.`Statuses` (`status_id` ASC);
+
+
+-- -----------------------------------------------------
+-- Table `create_educational`.`Tasks`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `create_educational`.`Tasks` ;
+
+CREATE TABLE IF NOT EXISTS `create_educational`.`Tasks` (
+  `task_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id` INT UNSIGNED NOT NULL,
+  `task` VARCHAR(100) NOT NULL,
+  `due_date` DATE NOT NULL,
+  `status_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`task_id`),
+  CONSTRAINT `fk_Tasks_Users1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `create_educational`.`Users` (`user_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Tasks_Statuses1`
+    FOREIGN KEY (`status_id`)
+    REFERENCES `create_educational`.`Statuses` (`status_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_Tasks_Users1_idx` ON `create_educational`.`Tasks` (`user_id` ASC);
+
+CREATE INDEX `fk_Tasks_Statuses1_idx` ON `create_educational`.`Tasks` (`status_id` ASC);
+
+CREATE UNIQUE INDEX `task_id_UNIQUE` ON `create_educational`.`Tasks` (`task_id` ASC);
+
+
+-- -----------------------------------------------------
+-- Table `create_educational`.`Groups`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `create_educational`.`Groups` ;
+
+CREATE TABLE IF NOT EXISTS `create_educational`.`Groups` (
+  `group_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(40) NOT NULL,
+  `comment` VARCHAR(100) NULL,
+  PRIMARY KEY (`group_id`))
+ENGINE = InnoDB;
+
+CREATE UNIQUE INDEX `group_id_UNIQUE` ON `create_educational`.`Groups` (`group_id` ASC);
+
+
+-- -----------------------------------------------------
+-- Table `create_educational`.`Works`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `create_educational`.`Works` ;
+
+CREATE TABLE IF NOT EXISTS `create_educational`.`Works` (
+  `work_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `type_id` INT UNSIGNED NOT NULL,
+  `task_id` INT UNSIGNED NOT NULL,
+  `group_id` INT UNSIGNED NULL,
+  `name` VARCHAR(100) NOT NULL,
+  `comment` VARCHAR(100) NULL,
+  `created_date` DATE NOT NULL,
+  `modified_date` DATE NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  `status_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`work_id`),
+  CONSTRAINT `fk_Works_Types1`
+    FOREIGN KEY (`type_id`)
+    REFERENCES `create_educational`.`Types` (`type_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Works_Tasks1`
+    FOREIGN KEY (`task_id`)
+    REFERENCES `create_educational`.`Tasks` (`task_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Works_Statuses1`
+    FOREIGN KEY (`status_id`)
+    REFERENCES `create_educational`.`Statuses` (`status_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Works_Groups1`
+    FOREIGN KEY (`group_id`)
+    REFERENCES `create_educational`.`Groups` (`group_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_Works_Types1_idx` ON `create_educational`.`Works` (`type_id` ASC);
+
+CREATE INDEX `fk_Works_Tasks1_idx` ON `create_educational`.`Works` (`task_id` ASC);
+
+CREATE INDEX `fk_Works_Statuses1_idx` ON `create_educational`.`Works` (`status_id` ASC);
+
+CREATE INDEX `fk_Works_Groups1_idx` ON `create_educational`.`Works` (`group_id` ASC);
+
+CREATE UNIQUE INDEX `work_id_UNIQUE` ON `create_educational`.`Works` (`work_id` ASC);
+
+
+-- -----------------------------------------------------
+-- Table `create_educational`.`Returns`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `create_educational`.`Returns` ;
+
+CREATE TABLE IF NOT EXISTS `create_educational`.`Returns` (
+  `return_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `work_id` INT UNSIGNED NOT NULL,
+  `comment` VARCHAR(100) NOT NULL,
+  `return_date` DATE NOT NULL,
+  `user_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`return_id`),
+  CONSTRAINT `fk_Return_YMK1`
+    FOREIGN KEY (`work_id`)
+    REFERENCES `create_educational`.`Works` (`work_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Return_Users1`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `create_educational`.`Users` (`user_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_Return_Works1_idx` ON `create_educational`.`Returns` (`work_id` ASC);
+
+CREATE INDEX `fk_Return_Users1_idx` ON `create_educational`.`Returns` (`user_id` ASC);
+
+CREATE UNIQUE INDEX `return_id_UNIQUE` ON `create_educational`.`Returns` (`return_id` ASC);
+
+
+-- -----------------------------------------------------
+-- Table `create_educational`.`Records`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `create_educational`.`Records` ;
+
+CREATE TABLE IF NOT EXISTS `create_educational`.`Records` (
+  `record_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `work_id` INT UNSIGNED NOT NULL,
+  `path` VARCHAR(150) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  CONSTRAINT `fk_Records_Works1`
+    FOREIGN KEY (`work_id`)
+    REFERENCES `create_educational`.`Works` (`work_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_Records_Works1_idx` ON `create_educational`.`Records` (`work_id` ASC);
+
+CREATE UNIQUE INDEX `record_id_UNIQUE` ON `create_educational`.`Records` (`record_id` ASC);
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- -----------------------------------------------------
+-- Data for table `create_educational`.`Statuses`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `create_educational`;
+INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (0, 'Запланировано', 1);
+INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (1, 'В процессе', 1);
+INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (2, 'Завершено', 1);
+INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (3, 'В разработке', 0);
+INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (4, 'Завершено', 0);
+INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (5, 'Возвращен на доработку', 0);
+INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (6, 'Утвержден', 0);
+
+COMMIT;
+
