@@ -26,7 +26,7 @@
                 <center><h3 class="form-signin-heading">Создание возврата</h3></center>
                 <div class="input-group">
                     <label for="ymr">УМР</label>
-                    <select class='form-control' required name="ymr_id">
+                    <select class='form-control' required name="work_id">
                         <option selected disabled style="display:none;">Выбрать разработку</option>
                         <?php 
                             require_once ($_SERVER['DOCUMENT_ROOT']."/MyProg/blocks/base.php");
