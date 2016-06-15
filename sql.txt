@@ -168,7 +168,7 @@ CREATE TABLE IF NOT EXISTS `create_educational`.`Works` (
   `name` VARCHAR(100) NOT NULL,
   `comment` VARCHAR(100) NULL,
   `created_date` DATE NOT NULL,
-  `modified_date` DATE NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  `modified_date` DATE NOT NULL,
   `status_id` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`work_id`),
   CONSTRAINT `fk_Works_Types1`
@@ -261,18 +261,4 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
--- -----------------------------------------------------
--- Data for table `create_educational`.`Statuses`
--- -----------------------------------------------------
-START TRANSACTION;
-USE `create_educational`;
-INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (0, 'Запланировано', 1);
-INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (1, 'В процессе', 1);
-INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (2, 'Завершено', 1);
-INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (3, 'В разработке', 0);
-INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (4, 'Завершено', 0);
-INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (5, 'Возвращен на доработку', 0);
-INSERT INTO `create_educational`.`Statuses` (`status_id`, `status`, `use_id`) VALUES (6, 'Утвержден', 0);
-
-COMMIT;
 

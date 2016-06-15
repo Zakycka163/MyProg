@@ -50,4 +50,3 @@
             }
     }
 ?>
-<script>location.reload();</script>
